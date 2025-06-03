@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
 @font-face {
     font-family: Onest;
     src: url(../font/Onest-VariableFont_wght.ttf);
@@ -10,7 +12,7 @@
 }
 
 .container {
-    max-width: 1550px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 30px 20px;
 }
@@ -48,10 +50,9 @@
 /* Main */
 .main {
     color: white;
-    padding: 60px 0;
+    padding: 60px 10px;
     display: flex;
-    width: 50%;
-    height: 50%;
+    width: 60vw;
 }
 
 .main .container {
@@ -72,16 +73,18 @@
     color: #53CC6C;
 }
 
-.main-text p{
+.main-text p {
+    font-weight: 400;
     font-size: 18px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.main-text a{
+.main-text a {
+    font-weight: 400;
     display: inline-block;
     background-color: transparent;
-    border: 2px solid #53CC6C;
+    border: 1px solid #53CC6C;
     color: #53CC6C;
     padding: 20px 40px;
     border-radius: 7px;
@@ -91,64 +94,228 @@
 
 /* In Company */
 .in-company {
-    background-image: url(../img/fred-terno.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 50vw;
-    height: 100vh;
-}
-
-.in-company-content {
+    background-color: #2B2D3D;
     display: flex;
-    gap: 40px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 50vw;
-    height: 100vh;
+    height: 110vh;
+    width: 100vw;
 }
 
 .in-company img {
-    max-width: 400px;
-    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+.in-company .text {
+    font-weight: 400;
+    display: flex;
+    min-width: 50%;
+    justify-content: center;
+    flex-direction: column;
+    ;
+    color: #ffffff;
+    padding: 25px;
+}
+
+.in-company .text h2 {
+    font-weight: 600;
+    color: #53CC6C;
+    font-size: 50px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.in-company .text p {
+    margin-top: 30px;
+    padding-left: 120px;
+    padding-right: 120px;
 }
 
 .in-company .text ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 25px;
     list-style: none;
-    padding-left: 0;
+    padding-left: 120px;
+    padding-right: 120px;
 }
 
-.in-company .text ul li::before {
-    content: '\2713';
-    color: #49d17d;
-    margin-right: 8px;
+.in-company .text ul>li {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.in-company .text ul li>i {
+    margin-right: 20px;
+    color: #53CC6C;
+    font-size: 40px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.in-company .text .btn-company {
+    display: inline-block;
+    max-width: 280px;
+    background: #49d17d;
+    color: white;
+    padding: 20px 35px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-left: 120px;
+    margin-top: 25px;
 }
 
 /* Mentoria */
 .mentoria {
-    padding: 60px 0;
-    background: #f5f5f5;
+    background: #ffffff;
+    display: flex;
+    width: 100vw;
+    height: 110vh;
 }
 
 .mentoria-content {
     display: flex;
     align-items: center;
-    gap: 40px;
+    justify-content: center;
+    text-align: left;
+    width: 50%;
+    margin: 37px;
+}
+
+.text h3 {
+    color: #669997;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.text p {
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.text ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.text ul>li {
+    display: flex;
+    align-items: center;
+}
+
+.text ul>li>i {
+    margin-right: 20px;
+    color: #53CC6C;
+    font-size: 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.mentoria-img img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.btn-mentoria {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid#669997;
+    color: #669997;
+    padding: 15px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 30px;
 }
 
 /* Quick Wins */
 .quick-wins {
-    background: #fff5ec;
-    padding: 60px 0;
+    padding: 60px 20px;
+    background-color: #fff9f5;
 }
 
-.quick-wins-content {
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+}
+
+.text-content {
+    flex: 1;
+    min-width: 320px;
+    padding-right: 40px;
+}
+
+.text-content h2 {
+    font-size: 28px;
+    color: #f26b1d;
+    margin-bottom: 15px;
+}
+
+.text-content .quote {
+    color: #003b2b;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.text-content .btn-quick {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #f26b1d;
+    color: #f26b1d;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.text-content .btn-quick:hover {
+    background-color: #f26b1d;
+    color: #fff;
+}
+
+.image-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.image-content {
+    background: linear-gradient(180deg, #f26b1d 0%, #f58a41 100%);
+    padding: 40px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.image-content img {
+    max-width: 400px;
+    height: auto;
+    display: block;
 }
 
 /* Vídeos */
