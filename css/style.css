@@ -7,7 +7,7 @@
 
 * {
     margin: 0%;
-    overflow-x: hidden;
+    scrollbar-width: none;
     font-family: 'Onest', Arial;
 }
 
@@ -105,6 +105,7 @@
     width: 100%;
     border-radius: 0;
     object-fit: cover;
+    display: block;
 }
 
 .in-company .text {
@@ -244,12 +245,12 @@
     background-color: #fff9f5;
 }
 
-.container {
+.quick-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
@@ -260,15 +261,21 @@
 }
 
 .text-content h2 {
-    font-size: 28px;
+    font-size: 40px;
     color: #f26b1d;
     margin-bottom: 15px;
 }
 
 .text-content .quote {
     color: #003b2b;
-    font-weight: 600;
     margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 24px;
+    max-width: 500px;
+}
+
+.text-content p>i{
+    font-size: 30px;
 }
 
 .text-content p {
@@ -276,17 +283,19 @@
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 20px;
+    max-width: 500px;
 }
 
 .text-content .btn-quick {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border: 1px solid #f26b1d;
     color: #f26b1d;
     border-radius: 6px;
     text-decoration: none;
     font-size: 14px;
     transition: background 0.3s, color 0.3s;
+    margin-top: 30px;
 }
 
 .text-content .btn-quick:hover {
@@ -294,62 +303,209 @@
     color: #fff;
 }
 
-.image-content {
-    flex: 1;
-    min-width: 300px;
-    text-align: center;
+.fundo_imagem-4 {
+    background-image: linear-gradient(to left, rgba(255, 102, 0, 0.5), rgba(255, 102, 0, 0.9), rgba(255, 102, 0, 0.555));
+    width: 450px;
+    height: 460px;
+    margin-top: 120px;
+    margin-left: 187px;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
 }
-
-.image-content img {
-    max-width: 100%;
-    border-radius: 20px;
-}
-
-.image-content {
-    background: linear-gradient(180deg, #f26b1d 0%, #f58a41 100%);
-    padding: 40px;
-    border-radius: 20px;
-    display: inline-block;
-}
-
-.image-content img {
-    max-width: 400px;
-    height: auto;
-    display: block;
+ 
+.fundo_imagem-4>img {
+    margin-top: -40px;
+    width: 400px;
+    height: 500px;
 }
 
 /* Vídeos */
-.videos {
-    padding: 60px 0;
-}
-
-.video-grid {
+.grid-videos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-top: 30px;
+    justify-items: center;
+    align-items: center;
 }
 
-.card img {
-    width: 100%;
+.videos .title{
+    display: flex;
+    align-items: center;
+}
+
+.videos .title>h3 {
+    color: #1C3433;
+    font-size: 35px;
+    padding: 15px;
+}
+
+.videos .title>p {
+    font-weight: 100;
+    max-width: 400px;
+    font-size: 13px;
+}
+
+.grid-videos figure {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 350px;
     border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: 100;
 }
 
-.card p {
-    margin-top: 10px;
+.figure-fred-terno-azul {
+    background-image:
+        url(../img/fred-video1.png);
+}
+ 
+.figure-fred-camisa-branca {
+    background-image:
+        url(../img/fred-video2.png);
+}
+ 
+.figure-fred-sorrindo {
+    background-image:
+        url(../img/fred-video3.png);
+}
+ 
+.figure-fred-xeque-mate {
+    background-image:
+        url(../img/fred-video4.png);
+}
+
+.grid-videos figcaption {
+    margin-top: auto;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.btn-videos {
+    display: flex;
+    background: transparent;
+    color: #53CC6C;
+    border: 1px solid #53CC6C;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 40px;
+    justify-content: center;
+    max-width: 300px;
+    margin-left: 430px;
+}
+
+.grid-videos figcaption > h4 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+ 
+.grid-videos figcaption > p {
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+ 
+.grid-videos figcaption > a {
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+}
+ 
+.grid-videos figcaption > a i {
+    margin-left: 5px;
 }
 
 /* Blog */
-.blog {
-    background: #f6f6f6;
-    padding: 60px 0;
+.blog{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F2EC;
 }
-
-.blog-grid {
+ 
+.blog .container-blog{
+   width: 1300px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ 
+.blog .container-blog .titulo-blog {
+    display: flex;
+    color: #fff;
+    align-items: center;
+}
+ 
+.blog .container-blog .titulo-blog > h2{
+    margin-right: 20px;
+    color: #1C3433;
+    font-size: 30px;
+}
+ 
+.blog .container-blog .titulo-blog > p{
+    width: 500px;
+    color: #6B6A66;
+}
+ 
+.grid-blog{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 30px;
+}
+ 
+.grid-blog figure{
+    width: 400px;
+    height: 420px;
+    background-color: #fff;
+    border-radius: 10px;
+ 
+}
+ 
+.grid-blog figure>img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+ 
+.grid-blog figure figcaption{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0px 20px;
+    height: 90px;
+}
+ 
+.grid-blog figure figcaption > h2{
+    font-size: 20px;
+}
+ 
+.grid-blog figure figcaption > a{
+    text-decoration: none;
+    color: #53CC6C;
+    font-weight: 500;
+}
+ 
+.container-blog .btn-acesso-blog{
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #53CC6C;
+    color: #53CC6C;
+    width: 300px;
+    padding: 20px;
+    border-radius: 7px;
+}
+ 
+.container-blog .container-btn{
+    display: flex;
+    justify-content: center;
 }
 
 /* Quem é */
@@ -359,58 +515,136 @@
 
 .quem-e-content {
     display: flex;
-    gap: 40px;
+    gap: 150px;
     align-items: center;
+}
+
+.quem-e h3 {
+    color: #1C3433;
+}
+
+.quem-e h6 {
+    color: #1C3433;
+    font-size: 15px;
+    max-width: 500px;
+}
+
+.quem-e p {
+    font-weight: 100;
+    padding-top: 10px;
+    max-width: 550px;
+}
+
+.btn-quem {
+    display: inline-block;
+    background: transparent;
+    color: #53CC6C;
+    border: 1px solid #53CC6C;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;;
 }
 
 /* Clientes */
 .clientes {
     padding: 60px 0;
     text-align: center;
+    margin: 40px;
 }
 
-.clientes-logos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 30px;
+.clientes h3 {
+    color: #1C3433;
+    font-size: 35px;
 }
 
-.clientes-logos img {
-    max-height: 40px;
+.clientes p {
+    font-weight: 100;
+    max-width: 500px;
+    justify-self: center;
+}
+
+.clientes img {
+    margin: 30px;
 }
 
 /* CTA Final */
-.cta-final {
-    background: #1f2432;
-    color: white;
-    padding: 60px 0;
+.cta {
+    background-color: #2B2D3D;
+    display: flex;
+    margin: 80px;
+    border-radius: 20px;
 }
 
-.cta-content {
+.cta img {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    object-fit: cover;
+    display: block;
+}
+
+.cta .text {
+    font-weight: 400;
+    display: flex;
+    min-width: 50%;
+    justify-content: center;
+    flex-direction: column;
+    ;
+    color: #ffffff;
+    padding: 25px;
+}
+
+.cta .text h2 {
+    font-weight: 600;
+    color: #53CC6C;
+    font-size: 50px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.cta .text p {
+    margin-top: 30px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.cta .text ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    list-style: none;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.cta .text ul>li {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+    margin-right: 100px;
 }
 
-/* Botão padrão */
-.btn {
+.cta .text ul li>i {
+    margin-right: 20px;
+    color: #53CC6C;
+    font-size: 40px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.cta .text .btn-company {
     display: inline-block;
+    max-width: 280px;
     background: #49d17d;
     color: white;
-    padding: 12px 24px;
+    padding: 15px 35px;
     border-radius: 4px;
     text-decoration: none;
-    margin-top: 20px;
+    margin-left: 120px;
+    margin-top: 15px;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-    border-radius: 10px;
-}
-
+/* Geral */
 .text {
     max-width: 600px;
 }
